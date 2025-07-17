@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHCORP - CÔNG TY PHÁT TRIỂN PHẦN MỀM HÀNG ĐẦU</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    </style>
+</head>
+<body>
+    <a href="#h1" title="Trang chủ TechCorp">
+        <img src="data:image/png;base64,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" alt="Logo TechCorp">
+    </a>
+    <ul>
+        <li><a href="#h1">Trang chủ</a></li>
+        <li><a href="#dichvu">Dịch vụ</a></li>
+        <li><a href="#duan">Dự án</a></li>
+        <li><a href="#doingu">Đội ngũ</a></li>
+        <li><a href="#lienhe">Liên hệ</a></li>
+    </ul>
+    <h1 id="h1">TECHCORP - CÔNG TY PHÁT TRIỂN PHẦN MỀM HÀNG ĐẦU</h1>
+    <p>Chúng tôi tạo ra những giải pháp công nghệ tiên tiến, giúp doanh nghiệp phát triển bền vững trong kỷ nguyên số.</p>
+    <video controls muted autoplay loop>
+        <source src="https://cdn.pixabay.com/video/2019/10/18/28052-367411298_tiny.mp4" type="video/mp4">
+    </video><br>
+    <p>
+        <a href="#dichvu">Khám phá dịch vụ</a>|
+        <a href="#lienhe">Liên hệ ngay</a>
+    </p>
+    
+    <h2 id="dichvu">Dịch vụ của chúng tôi</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">STT</th>
+                <th rowspan="2">Tên dịch vụ</th>
+                <th colspan="3">Gói dịch vụ</th>
+                <th rowspan="2">Thời gian</th>
+            </tr>
+            <tr>
+                <th>Cơ bản</th>
+                <th>Nâng cao</th>
+                <th>Doanh nghiệp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>Phát triển web</strong></td>
+                <td>50 triệu</td>
+                <td>150 triệu</td>
+                <td>500 triệu</td>
+                <td>2-6 tháng</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>Phát triển Mobile App</strong></td>
+                <td>80 triệu</td>
+                <td>250 triệu</td>
+                <td>800 triệu</td>
+                <td>3-9 tháng</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Tư vấn Chuyển đổi số</strong></td>
+                <td>30 triệu</td>
+                <td>100 triệu</td>
+                <td>300 triệu</td>
+                <td>1-4 tháng</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>Bảo trì & Hỗ trợ</strong></td>
+                <td colspan="3">Theo thỏa thuận</td>
+                <td>Dài hạn</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Chi tiết dịch vụ phát triển Web</h3>
+    <ol type="I">
+        <li>
+            Giai đoạn phân tích
+            <ol>
+                <li>Thu thập yêu cầu</li>
+                <li>Phân tích nghiệp vụ</li>
+                <li>Thiết kế kiến trúc</li>
+            </ol>  
+        </li>
+        <li>
+            Giai đoạn thiết kế
+            <ol>
+                <li>Wireframe</li>
+                <li>UI/UX Design</li>
+                <li>Prototype</li>
+            </ol>
+        </li>
+        <li>
+            Giai đoạn phát triển
+            <ol>
+                <li>Backend Development</li>
+                <li>Frontend Development</li>
+                <li>Database Design</li>
+            </ol>
+        </li>
+        <li>
+            Giai đoạn triển khai
+            <ol>
+                <li>Testing</li>
+                <li>Deployment</li>
+                <li>Training</li>
+            </ol>
+        </li>
+    </ol>
+    <h3>Công nghệ chúng tôi sử dụng</h3>
+    <ul>
+        <li><strong>Frontend</strong>: HTML5, CSS3, JavaScript, React.js, Vue.js, Angular</li>
+        <li><strong>Backend</strong>: Node.js, Python, Java, PHP, C#</li>
+        <li><strong>Database</strong>: MySQL, PostgreSQL, MongoDB, Redis</li>
+        <li><strong>Cloud</strong>: AWS, Google Cloud, Microsoft Azure</li>
+        <li><strong>Mobile</strong>: React Native, Flutter, Native iOS/Android</li>
+    </ul>    
+    <h2 id="duan">DỰ ÁN NỔI BẬT</h2>
+    <h3>1. Hệ thống E-commerce SmartMall</h3>
+    <a href="https://smartmall-demo.techcorp.vn/" target="_blank" title="Xem dự án SmartMall">
+        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Giao diện SmartMall" width="200">
+    </a>
+    <p>Hệ thống thương mại điện tử đa nền tảng với hơn <strong>1 triệu</strong> sản phẩm và <strong>500,000</strong> người dùng.</p>
+    <h4>Tính năng chính</h4>
+        <ul>
+            <li>Quản lý sản phẩm thông minh</li>
+            <li>Hệ thống thanh toán đa kênh</li>
+            <li>AI recommendation</li>
+            <li>Dashboard analytics</li>
+        </ul>
+    <h4>Demo video</h4>  
+    <video width="500" height="280" controls>
+        <source src="https://cdn.pixabay.com/video/2016/05/01/2946-164933125_large.mp4" type="video/mp4">
+    </video>  
+
+    <h3>2. Ứng dụng FinTech - MoneyWise</h3>
+    <a href="https://moneywise-app.techcorp.vn/">
+        <img src="https://plus.unsplash.com/premium_photo-1679397743664-f9384e6ad49d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW9uZXl8ZW58MHx8MHx8fDA%3D" alt="Giao diện MoneyWise" width="200" title="Tải ứng dụng MoneyWise">
+    </a>
+    <p>Ứng dụng quản lý tài chính cá nhân với công nghệ blockchain và AI.</p>
+    <h4>Podcast về dự án:</h4>
+    <audio controls>
+        <source src="audio/audio.mp3" type="audio/mp3">
+        Trình duyệt của bạn không hỗ trợ audio.
+    </audio>
+    <h3>Hệ thống ERP cho doanh nghiệp</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Module</th>
+                <th>Chức năng</th>
+                <th>Trạng thái</th>
+                <th>Tiến độ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Quản lý nhân sự</td>
+                <td>Chấm công</td>
+                <td>Hoàn thành</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Tính lương</td>
+                <td>Hoàn thành</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Đánh giá KPI</td>
+                <td>Đang phát triển</td>
+                <td>75%</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Quản lý bán hàng</td>
+                <td>Đơn hàng</td>
+                <td>Hoàn thành</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Báo cáo doanh thu</td>
+                <td>Testing</td>
+                <td>90%</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="doingu">ĐỘI NGŨ CHUYÊN GIA</h2>
+    <h3>Ban lãnh đạo</h3>
+    <ol type="A">
+        <li><strong>Nguyễn Văn Minh</strong> - CEO & Founder</li>
+        <ul>
+            <li>15 năm kinh nghiệm trong ngành IT</li>
+            <li>Cựu Technical Director tại <a href="https://fpt.com/">FPT Software</a></li>
+            <li>Master in Computer Science - Stanford University</li>
+        </ul>
+        <li><strong>Trần Thị Hương</strong> - CTO</li>
+        <ul>
+            <li>12 năm kinh nghiệm phát triển phần mềm</li>
+            <li>Chuyên gia về Cloud Computing và DevOps</li>
+            <li>AWS Solutions Architect Professional</li>
+        </ul>
+        <li><strong>Lê Hoàng Nam</strong> - Head of Design</li>
+        <ul>
+            <li>10 năm kinh nghiệm UX/UI Design</li>
+            <li>Cựu Senior Designer tại <a href="https://www.grab.com/vn/">Grab</a></li>
+            <li>Google UX Design Certificate</li>
+        </ul>
+    </ol>
+    <h3>Đội ngũ phát triển</h3>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Bộ phận</th>
+                <th colspan="3">Cấp độ</th>
+                <th rowspan="2">Tổng</th>
+            </tr>
+            <tr>
+                <th>Junior</th>
+                <th>Senior</th>
+                <th>Lead</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frontend</td>
+                <td>8</td>
+                <td>12</td>
+                <td>3</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>6</td>
+                <td>15</td>
+                <td>4</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td>4</td>
+                <td>8</td>
+                <td>2</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>DevOps</td>
+                <td>2</td>
+                <td>5</td>
+                <td>2</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>QA/Testing</td>
+                <td>5</td>
+                <td>8</td>
+                <td>2</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="khachhang">KHÁCH HÀNG NÓI VỀ CHÚNG TÔI</h2>
+    <blockquote>
+        <p><em>"TechCorp đã giúp chúng tôi chuyển đổi hoàn toàn hệ thống quản lý. Doanh thu tăng 300% sau 6 tháng triển khai."</em></p>
+        <footer>
+            <p><strong>Ông Phạm Minh Tuấn</strong>
+            <br>
+            CEO - <a href="https://vinamart.vn/">VinaMart JSC</a>
+            </p>
+        </footer>
+    </blockquote>
+    <blockquote>
+        <p><em>"Đội ngũ TechCorp rất chuyên nghiệp. Họ không chỉ làm theo yêu cầu mà còn tư vấn những giải pháp tối ưu nhất."</em></p>
+        <footer>
+            <p><strong>Bà Nguyễn Thị Lan</strong>
+            <br>
+            IT Director - <a href="https://techbank.vn/">TechBank</a>
+            </p>
+    </blockquote>
+    <blockquote>
+        <p><em>"Ứng dụng mobile do TechCorp phát triển đã giúp chúng tôi tiếp cận hơn 2 triệu khách hàng mới."</em></p>
+        <footer>
+            <p><strong>Ông Trần Văn Hải</strong>
+            <br>
+            Marketing Director - <a href="https://smartretail/">SmartRetail</a>
+            </p>
+        </footer>
+    </blockquote>
+    <h2 id="lienhe">LIÊN HỆ VỚI CHÚNG TÔI</h2>
+    <h3>Thông tin liên hệ</h3>
+    <address>
+        <p>
+            <strong>CÔNG TY TNHH TECHCORP VIỆT NAM</strong>
+            <br>
+            <em>Địa chỉ: Tầng 25, Tòa nhà Landmark Tower</em>
+            <br>
+            <em>123 Đường Nguyễn Huệ, Quận 1</em>
+            <br>
+            <em>TP. Hồ Chí Minh, Việt Nam</em>
+            <br>
+            <br>
+            <strong>Hotline:</strong> <a href="tel:+84901234567">0901.234.567</a>
+            <br>
+            <strong>Email:</strong> <a href="mailto:contact@techcorp.vn">contact@techcorp.vn</a>
+            <br>
+            <strong>Website:</strong> <a href="https://techcorp.vn" target="_blank">techcorp.vn</a>
+        </p>
+    </address>
+    <h3>Giờ làm việc</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Thứ</th>
+                <th>Giờ hành chính</th>
+                <th>Hỗ trợ khản cấp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thứ 2 - Thứ 6</td>
+                <td>8:00 - 17:30</td>
+                <td>24/7</td>
+            </tr>
+            <tr>
+                <td>Thứ 7</td>
+                <td>8:00 - 12:00</td>
+                <td>24/7</td>
+            </tr>
+            <tr>
+                <td>Chủ nhật</td>
+                <td>Nghỉ</td>
+                <td>24/7</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Văn phòng chi nhánh</h3>
+    <ul>
+        <li>
+            <strong>Hà Nội:</strong> Tầng 15, Tòa nhà Times City - <a href="tel:+8412345678">0912.345.678</a> 
+        </li>
+        <li>
+            <strong>Đà Nẵng:</strong> Tầng 8, Tòa nhà Dragon Bridge - <a href="tel:+8423456789">0923.456.789</a>
+        </li>
+        <li>
+            <strong>Cần Thơ:</strong> Tầng 6, Tòa nhà Mekong Center - <a href="tel:+8434567890">0934.567.890</a>
+        </li>
+    </ul>
+    <hr>
+    <h3>TECHCORP - ĐỒNG HÀNH CÙNG THÀNH CÔNG</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h4>Dịch vụ</h4>
+                    <ul>
+                        <li><a href="#dichvu">Phát triển web</a></li>
+                        <li><a href="#dichvu">Phát triển Mobile</a></li>
+                        <li><a href="#dichvu">Tư vấn IT</a></li>
+                        <li><a href="#dichvu">Bảo trì hệ thống</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <h4>Công ty</h4>
+                    <ul>
+                        <li><a href="#doingu">Về chúng tôi</a></li>
+                        <li><a href="#duan">Dự án</a></li>
+                        <li><a href="#khachhang">Khách hàng</a></li>
+                        <li><a href="https://catherine1401.github.io/PTC-FRONTEND/exercise/careers.html">Tuyển dụng</a></li>
+                </td>
+                <td>
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#lienhe">Liên hệ</a></li>
+                        <li><a href="#lienhe">Hỗ trợ kỹ thuật</a></li>
+                        <li><a href="#lienhe">FAQ</a></li>
+                        <li><a href="#lienhe">Tài liệu</a></li>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="footer-copyright" id="copyright">
+        © 2024 TechCorp Vietnam. Tất cả quyền được bảo lưu.|
+        <a href="privacy.html">Chính sách bảo mật</a> |
+        <a href="terms.html">Điều khoản sử dụng</a>
+    </p>
+    <p><a href="#">Về đầu trang</a></p>
+
+
+</body>
+</html
