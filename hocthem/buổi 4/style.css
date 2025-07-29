@@ -1,0 +1,179 @@
+/* Font và reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    background-color: #2a1204;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 16px;
+    color: #ddd;
+}
+.menu {
+    background-color: #994400; /* màu nền nâu cam */
+    text-align: center;
+    padding: 15px 0;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* cho responsive */
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
+}
+
+.menu ul li a:hover {
+    color: #ffd39f;
+    border-bottom: 2px solid #ffd39f;
+}
+
+
+
+
+/* Giới thiệu */
+.intro {
+    position: relative;
+    background: linear-gradient(135deg, #5a3a21, #bb8050);
+    padding: 80px 20px;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.intro h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+/* Vòng tròn trang trí bên phải */
+.intro::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 12%;
+    top: 32%;
+    background-color: rgba(80, 30, 0, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Sản phẩm */
+.products {
+    background-color: #faf7f2;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #3d1c00;
+}
+
+.product-box {
+    background-color: #f6f2eb;
+    border: 2px solid #d3af7f;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.product-box i.icon {
+    font-size: 36px;
+    color: #994400;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+.product-box h3 {
+    font-size: 24px;
+    color: #994400;
+}
+
+.product-box p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-box strong {
+    font-size: 18px;
+    color: #000;
+}
+
+/* Về chúng tôi */
+.about {
+    background-color: #2a1204;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer - Liên hệ */
+footer {
+    background-color: #d2ab7b;
+    color: #2a1204;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 5px 0;
+}
