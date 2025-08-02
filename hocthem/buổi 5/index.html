@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Viện Lập Trình DACA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>🎓 Học Viện Lập Trình DACA</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#courses">Khóa học</a></li>
+                    <li><a href="#students">Học viên</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Khởi đầu sự nghiệp lập trình của bạn</h2>
+                <p>Tham gia các khóa học chất lượng cao với đội ngũ giảng viên giàu kinh nghiệm</p>
+                <a href="#courses" class="cta-button">Khám phá khóa học</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Khóa học nổi bật</h2>
+            
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Front-end Development</h3>
+                    <div class="course-info">
+                        <span>3 tháng</span>
+                        <span>Cơ bản</span>
+                        <span>Online/Offline</span>
+                    </div>
+                    <p>Học HTML, CSS, JavaScript từ cơ bản đến nâng cao. Xây dựng các website responsive và tương tác.</p>
+                    <div class="course-price">5.000.000 VNĐ</div>
+                </div>
+
+                <div class="course-card">
+                    <h3>React.js Advanced</h3>
+                    <div class="course-info">
+                        <span>2 tháng</span>
+                        <span>Nâng cao</span>
+                        <span>Online</span>
+                    </div>
+                    <p>Chuyên sâu về React.js, Redux, Context API. Xây dựng Single Page Application hiện đại.</p>
+                    <div class="course-price">7.000.000 VNĐ</div>
+                </div>
+
+                <div class="course-card">
+                    <h3>Full-stack Development</h3>
+                    <div class="course-info">
+                        <span>6 tháng</span>
+                        <span>Chuyên nghiệp</span>
+                        <span>Offline</span>
+                    </div>
+                    <p>Trở thành Full-stack Developer với Node.js, Express, MongoDB, React và nhiều công nghệ khác.</p>
+                    <div class="course-price">12.000.000 VNĐ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Thành tích của chúng tôi</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Học viên tốt nghiệp</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Khóa học</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Tỷ lệ có việc làm</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.8/5</span>
+                    <span class="stat-label">Đánh giá học viên</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Table -->
+    <section class="students-section" id="students">
+        <div class="container">
+            <h2 class="section-title">Danh sách học viên tiêu biểu</h2>
+            
+            <div class="table-responsive">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Khóa học</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
+                            <th>Tiến độ</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nguyễn Văn An</td>
+                            <td>Front-end Development</td>
+                            <td>nguyenvana@email.com</td>
+                            <td>0901234567</td>
+                            <td>85%</td>
+                            <td><span class="status-active">Đang học</span></td>
+                        </tr>
+                        <tr>
+                            <td>Trần Thị Bình</td>
+                            <td>React.js Advanced</td>
+                            <td>tranthib@email.com</td>
+                            <td>0902345678</td>
+                            <td>100%</td>
+                            <td><span class="status-completed">Hoàn thành</span></td>
+                        </tr>
+                        <tr>
+                            <td>Lê Văn Cường</td>
+                            <td>Full-stack Development</td>
+                            <td>levanc@email.com</td>
+                            <td>0903456789</td>
+                            <td>60%</td>
+                            <td><span class="status-active">Đang học</span></td>
+                        </tr>
+                        <tr>
+                            <td>Phạm Thị Dung</td>
+                            <td>Front-end Development</td>
+                            <td>phamthid@email.com</td>
+                            <td>0904567890</td>
+                            <td>0%</td>
+                            <td><span class="status-pending">Chờ bắt đầu</span></td>
+                        </tr>
+                        <tr>
+                            <td>Hoàng Văn Em</td>
+                            <td>React.js Advanced</td>
+                            <td>hoangvane@email.com</td>
+                            <td>0905678901</td>
+                            <td>100%</td>
+                            <td><span class="status-completed">Hoàn thành</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Tại sao chọn DACA?</h2>
+            
+            <ul class="features-list">
+                <li>Giảng viên giàu kinh nghiệm với hơn 10 năm trong ngành</li>
+                <li>Chương trình học cập nhật theo xu hướng công nghệ mới nhất</li>
+                <li>Hỗ trợ tìm việc làm sau khi tốt nghiệp với mức lương hấp dẫn</li>
+                <li>Học phí hợp lý, có thể trả góp 0% lãi suất</li>
+                <li>Môi trường học tập chuyên nghiệp với trang thiết bị hiện đại</li>
+                <li>Cộng đồng alumni mạnh mẽ hỗ trợ networking</li>
+                <li>Chứng chỉ được công nhận bởi các doanh nghiệp hàng đầu</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>© 2024 Học Viện Lập Trình DACA. Tất cả quyền được bảo lưu.</p>
+            <p>Email: <a href="mailto:contact@daca.vn">contact@daca.vn</a> | 
+               Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+            <p>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <a href="#home" class="fab">↑</a>
+
+
+</body>
