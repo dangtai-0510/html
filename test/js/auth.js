@@ -26,7 +26,7 @@ const Auth = {
             <option value="manager">Quản lý</option>
           </select>
         </div>
-        <input id="rgCode" class="input hidden" placeholder="Mã quản lý (0510)">
+        <input id="rgCode" class="input hidden" placeholder="Mã quản lý">
         <p id="rgMsg" class="has-text-danger"></p>
         <button class="button is-link is-fullwidth" onclick="Auth.register()">Tạo tài khoản</button>
         <p class="has-text-centered mt-4">Đã có tài khoản?
