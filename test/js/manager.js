@@ -1,11 +1,11 @@
 // js/manager.js
 // ====================
-//  Trang dành cho Quản lý
+//  Trang Quản lý
 // ====================
 const Manager = {
   /* -------- Bảng thống kê -------- */
   view() {
-    const data = DB.getSubs();                  // { user : [ {title,time}, … ] }
+    const data = DB.getSubs();
 
     Router.go(`
       <h2 class="title is-4">Thống kê nộp bài</h2>
@@ -25,9 +25,7 @@ const Manager = {
               <td class="has-text-centered">${data[u].length}</td>
               <td>
                 <button class="button is-small is-info"
-                        onclick="Manager.viewSubmissions('${u}')">
-                  Xem bài
-                </button>
+                        onclick="Manager.viewSub('${u}')">Xem bài</button>
               </td>
             </tr>
           `).join('')}
@@ -36,10 +34,9 @@ const Manager = {
     `);
   },
 
-  /* -------- Xem chi tiết bài nộp của 1 học viên -------- */
-  viewSubmissions(user) {
-    const subs      = DB.getSubs();
-    const userSubs  = subs[user] || [];
+  /* -------- Xem chi tiết bài nộp -------- */
+  viewSub(user) {
+    const list = DB.getSubs()[user] || [];
 
     Router.go(`
       <h2 class="title is-4">Bài làm của: ${user}</h2>
@@ -48,12 +45,20 @@ const Manager = {
 
       <table class="table is-fullwidth is-striped mt-4">
         <thead>
-          <tr><th>Tiêu đề</th><th>Thời gian nộp</th></tr>
+          <tr>
+            <th>#</th><th>Tiêu đề</th><th>File</th><th>Thời gian nộp</th>
+          </tr>
         </thead>
         <tbody>
-          ${userSubs.map(s => `
+          ${list.map((s,i)=>`
             <tr>
+              <td>${i+1}</td>
               <td>${s.title}</td>
+              <td>
+                ${s.fileName
+                    ? `<a href="${s.fileData}" download="${s.fileName}">${s.fileName}</a>`
+                    : '—'}
+              </td>
               <td>${new Date(s.time).toLocaleString()}</td>
             </tr>
           `).join('')}
