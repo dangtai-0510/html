@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Thông Tin Của Đặng Tài</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Đặng Đức Tài</title>
+    <meta name="description" content="Trang thông tin cá nhân và dự án của Đặng Đức Tài, sinh viên Đại học Phenikaa.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <h1>Thông tin của Tài đây</h1>
+  </head>
 
-        <p id="greeting">Xin chào! Tôi tên là <strong>Đặng Đức Tài</strong>.</p>
-        <p>Tôi là sinh viên Đại học Phenikaa. Sau đây là thông tin của tôi:</p>
+  <body>
+    <header class="header container">
+      <h1 class="site-title">Đặng Đức Tài</h1>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#projects">Dự án</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <button id="darkModeToggle" class="btn btn--toggle">Dark/Light</button>
+    </header>
 
-        <button onclick="toggleImage()">Ẩn/Hiện ảnh</button>
-        <img class="avatar" id="avatar" src="https://scontent.fhan14-4.fna.fbcdn.net/v/t39.30808-6/499536943_1492747848745392_6811329620621225692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGPPGurAaLYKaIX2fQ0tPdU5FJ5snDdoDTkUnmycN2gNMKsI_ni_SQOyr4nVVDqGhno2mSRzEx9VSluHrMKE3-4&_nc_ohc=y7LBcALy0d4Q7kNvwHJX-e8&_nc_oc=AdmqckVTq3h3pTcVkRnYDOPcqiUotDCV7GNkMhJmvfcPRr8gMeTs0FTYdTr8ZmBtF8Q&_nc_zt=23&_nc_ht=scontent.fhan14-4.fna&_nc_gid=rzOGupMI8OylKHcbAdD2Sw&oh=00_AfSWPW4xUdypoyqVipWAP230mi6dQMXA6RucGGL4ASq1BA&oe=6872F5B8" alt="Ảnh của Tài">
-
-        <div class="links">
-            <a href="https://www.facebook.com/ok.tai.5688" target="_blank">Facebook của Tài</a>
-            <a href="https://www.instagram.com/dangtai_ddt05._.10/" target="_blank">Instagram của Tài</a>
-            <a href="https://github.com/dangtai-0510" target="_blank">GitHub của Tài</a>
+    <main>
+      <!-- Giới thiệu -->
+      <section id="about" class="about container">
+        <div class="about__inner">
+          <img src="images/avatar.jpg"
+               alt="Chân dung Đặng Đức Tài"
+               id="avatar"
+               class="avatar">
+          <div class="about__text">
+            <p id="greeting">Xin chào! Tôi tên là <strong>Đặng Đức Tài</strong>.</p>
+            <p>Sinh viên Trường Công Nghệ Thông Tin, Đại Học Phenikaa, Khoa Hệ Thống THông Tin, Chuyên ngành Công Nghệ Thông .</p>
+            <button id="toggleImageBtn" class="btn">Ẩn/Hiện ảnh</button>
+          </div>
         </div>
+      </section>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Họ và Tên</th>
-                    <th>Tuổi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Đặng Đức Tài</td>
-                    <td>18</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="dark-mode-toggle">
-            <button onclick="toggleDarkMode()">Chuyển Dark/Light Mode</button>
+      <!-- Dự án -->
+      <section id="projects" class="projects container">
+        <h2>Dự án tiêu biểu</h2>
+        <div class="projects__list">
+          <article class="card">
+            <h3>Dự án 1</h3>
+            <p>Mô tả ngắn gọn về dự án 1.</p>
+            <a href="#" class="btn">Xem chi tiết</a>
+          </article>
+          <!-- Thêm các card khác tương tự -->
         </div>
-    </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer container">
+      <h2>Liên hệ</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/ok.tai.5688" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/dangtai_ddt05._.10/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/dangtai-0510" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>&copy; 2025 Đặng Đức Tài. All rights reserved.</p>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>
