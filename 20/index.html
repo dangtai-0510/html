@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Món quà 20/10 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="welcome" id="welcome">
+    <p>
+      Xin chào <strong>bạn✌️</strong>,
+      đây là 1 món quà được tôi làm hơn tháng nay =))) 😀😀😀
+    </p>
+
+
+    <button id="viewBtn">Xem ngay 🎁</button>
+  </div>
+
+  <!-- SCENE LAYER -->
+  <div class="scene" id="scene">
+    <!-- stickman (hidden until start) -->
+    <div class="stickman hidden" id="stickman" aria-hidden="true">
+      <div class="head" id="head">😊</div>
+      <div class="torso"></div>
+
+      <!-- left arm (support) -->
+      <div class="arm arm-left" id="armLeft"></div>
+
+      <!-- right arm holding bomb -->
+      <div class="arm arm-right" id="armRight">
+        <div class="hand-bomb" id="handBomb"></div>
+      </div>
+
+      <div class="leg leg-left"></div>
+      <div class="leg leg-right"></div>
+    </div>
+
+    <!-- bomb element -->
+    <div class="bomb hidden" id="bomb" aria-hidden="true"></div>
+
+    <!-- explosion -->
+    <div class="explosion hidden" id="explosion" aria-hidden="true"></div>
+  </div>
+
+  <!-- message -->
+  <div class="message hidden" id="message" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
