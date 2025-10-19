@@ -239,32 +239,46 @@ viewBtn.addEventListener("click", async () => {
   setTimeout(() => stickman.classList.add("hidden"), 400);
 
   await new Promise((r) => setTimeout(r, 500));
+
+  // -------- TAB 1 --------
   await typeWriter(
     "Chào con gà tduong, cái này được nghĩ và bắt tay vào làm hơn tháng, nma cũng là trình 1 thằng năm hai và gà mờ nên hơi sơ sài, có gì thông cảm cho bạn 😀😀😀😀",
     40,
     false
   );
 
+  // Giữ lại nội dung vài giây trước khi qua tab 2
+  await new Promise((r) => setTimeout(r, 2500));
+
+  // Xóa nội dung tab 1 (chuyển sang tab 2)
+  message.innerHTML = "";
+
   // Giai đoạn 2 – nền hồng pastel nhẹ (đậm hơn để chữ nổi rõ)
-body.animate(
-  [
-    { background: "linear-gradient(135deg, #f5c6ec, #ffe4f2)" },
-    { background: "linear-gradient(135deg, #e8aaff, #ffd6eb)" },
-  ],
-  { duration: 2000, fill: "forwards" }
-);
+  body.animate(
+    [
+      { background: "linear-gradient(135deg, #f5c6ec, #ffe4f2)" },
+      { background: "linear-gradient(135deg, #e8aaff, #ffd6eb)" },
+    ],
+    { duration: 2000, fill: "forwards" }
+  );
 
+  // -------- TAB 2 --------
+  await new Promise((r) => setTimeout(r, 1500));
+  await typeWriter(
+    "Đầu tiên thì Tôi chúc bạn 20/10 vui vẻ và lúc nào cũng xinh như những bó hoa nhé =))))))😀😀😶‍🌫️😶‍🌫️",
+    40,
+    false
+  );
 
   await new Promise((r) => setTimeout(r, 2000));
-  await typeWriter("\n Đầu tiên thì Tôi chúc bạn 20/10 vui vẻ và lúc nào cũng xinh như những bó hoa nhé =))))))😀😀😶‍🌫️😶‍🌫️", 40, true);
-  await new Promise((r) => setTimeout(r, 2000));
-  await typeWriter("\n Học ít thôi dcmmm =)))", 40, true);
+  await typeWriter("\nHọc ít thôi dcmmm =)))", 40, true);
   await new Promise((r) => setTimeout(r, 2500));
   await typeWriter("\nTiếp nào con gà =)))))", 50, true);
 
   await new Promise((r) => setTimeout(r, 1000));
   await transitionToScene2();
 
+  // Các đoạn sau (tab 3...) giữ nguyên như cũ
   const start2X = -100;
   const midY = window.innerHeight * 0.65;
   const midX = window.innerWidth / 2;
@@ -294,7 +308,8 @@ body.animate(
   await typeWriter("\nCó thể đến đây thôi được rồi, hơi sơ sài nhưng mà có thành ý =)))", 40, true);
   await new Promise((r) => setTimeout(r, 2000));
   await typeWriter("\n😤😠À dcmm m hẹn chán chê đi ăn r còn chưa đi đâu đó, nma thoi tạm thời bây giờ chắc không cần nữa =)))🤦‍♂️🤦‍♂️🤦‍♂️", 40, false);
-  // 🎬 Kết thúc lãng mạn
+
+  // 🎬 Kết thúc lãng mạn (giữ nguyên đoạn kết)
   await new Promise((r) => setTimeout(r, 3500));
   const overlay = document.createElement("div");
   overlay.style.position = "fixed";
@@ -338,7 +353,6 @@ body.animate(
     spawnFlowers(Math.random() * window.innerWidth, Math.random() * window.innerHeight, 1);
   }, 900);
 
-  // Nút xem lại
   document.getElementById("retryBtn").addEventListener("click", () => {
     overlay.style.opacity = 0;
     setTimeout(() => {
@@ -347,4 +361,3 @@ body.animate(
     }, 800);
   });
 });
-
