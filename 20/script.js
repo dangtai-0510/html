@@ -282,18 +282,18 @@ body.animate(
     { duration: 4000, fill: "forwards", easing: "ease-in-out" }
   );
 
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise((r) => setTimeout(r, 2000));
   await typeWriter("Tab này bạn cop gpt nma vẫn thật lòng nha =))), tại bị bí ý tưởng á", 40, false);
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise((r) => setTimeout(r, 2000));
   await typeWriter("\nChúc bạn một ngày 20/10 thật đặc biệt - được nhận nhiều lời chúc, hoa và cả những điều bất ngờ dễ thương nữa 😄", 40, false);
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise((r) => setTimeout(r, 2000));
   await typeWriter("\nHy vọng bạn luôn giữ được nụ cười tươi, tinh thần lạc quan và niềm vui trong học tập cũng như cuộc sống.", 40, false);
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise((r) => setTimeout(r, 2000));
   await typeWriter("\nNói chung là chúc mọi điều tốt đẹp nhất sẽ đến với bạn nha! 💐✨", 40, false);
   await new Promise((r) => setTimeout(r, 2500));
   await typeWriter("\nCó thể đến đây thôi được rồi, hơi sơ sài nhưng mà có thành ý =)))", 40, true);
-  await new Promise((r) => setTimeout(r, 1000));
-  await typeWriter("\n😤😠À dcmm m còn nợ t bữa ăn đó, hmmm, nhưng mà thoi giờ chắc cũng ko cần nữa đâu =)))🤦‍♂️🤦‍♂️", 40, false);
+  await new Promise((r) => setTimeout(r, 2000));
+  await typeWriter("\n😤😠À dcmm m hẹn chán chê đi ăn r còn chưa đi đâu đó, nma thoi tạm thời bây giờ chắc không cần nữa =)))🤦‍♂️🤦‍♂️🤦‍♂️", 40, false);
   // 🎬 Kết thúc lãng mạn
   await new Promise((r) => setTimeout(r, 3500));
   const overlay = document.createElement("div");
@@ -347,3 +347,4 @@ body.animate(
     }, 800);
   });
 });
+
