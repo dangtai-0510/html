@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lời động viên</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Màn 1: mở đầu -->
+  <div id="screen-warning" class="screen active">
+    <div class="box">
+      <h2>Con lợn này 😠 lại bia rượu nữa hả?</h2>
+      <p>Có biết như vậy hại lắm không?<br>Ấn "Xem ngay" để biết nè.</p>
+      <button id="btn-watch">Xem ngay</button>
+    </div>
+  </div>
+
+  <!-- Màn 2: tác hại (đánh máy) -->
+  <div id="screen-effects" class="screen">
+    <div class="box">
+      <h2>Tác hại của bia rượu 🍺🚫</h2>
+      <p id="effectText" class="type-area"></p>
+      <button id="btn-next" class="btn-hidden">Xem tiếp</button>
+    </div>
+  </div>
+
+  <!-- Màn 3: lời động viên (tiêu đề + đánh máy) -->
+  <div id="screen-message" class="screen">
+    <div class="message-box">
+      <h2 id="titleMessage" class="title">Lời nói tao muốn gửi m 💬</h2>
+      <p id="messageText" class="type-area"></p>
+      <!-- final message luôn có trong DOM, hiện bằng class "show" -->
+      <div id="finalMessage" class="final">Bí quá thì sau này về t nuôi cũng được mà 🐧🐧🐧🐧</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
