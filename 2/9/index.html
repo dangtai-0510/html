@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Lá Cờ Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro-container">
+        <div class="particles" id="particles"></div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn" id="zoomIn">🔍+</button>
+            <button class="control-btn" id="zoomOut">🔍-</button>
+            <button class="control-btn" id="reset">🔄</button>
+            <button class="control-btn" id="fullscreen">⛶</button>
+        </div>
+        
+        <div class="flag-container" id="flagContainer">
+            <div class="glow"></div>
+            <div class="flag-pole"></div>
+            <div class="flag" id="flag">
+                <div class="star">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 5 L61.8 38.2 L95 38.2 L69.1 61.8 L80.9 95 L50 71.8 L19.1 95 L30.9 61.8 L5 38.2 L38.2 38.2 Z" 
+                              fill="#ffdd00" 
+                              stroke="#ffd700" 
+                              stroke-width="0.5"/>
+                    </svg>
+                </div>
+                <div class="wave-effect"></div>
+            </div>
+        </div>
+        
+        <div class="title">VIỆT NAM</div>
+        <div class="subtitle">Đất nước - Con người</div>
+        
+        <!-- Click prompt -->
+        <div class="click-prompt" id="clickPrompt">Click vào đây đi ✨</div>
+        
+        <!-- Message modal -->
+        <div class="message-modal" id="messageModal">
+            <div class="message-content">
+                <div class="message-text">
+                    <h2>Chúc mừng ngày Quốc Khánh Việt Nam</h2>
+                    <p>Tự hào Việt Nam</p>
+                </div>
+                <button class="close-btn" id="closeModal">✕</button>
+            </div>
+        </div>
+        
+        <!-- Zoom indicator -->
+        <div class="zoom-indicator" id="zoomIndicator">100%</div>
+        
+        <!-- Audio toggle -->
+        <button class="audio-toggle" id="audioToggle">🔊</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
